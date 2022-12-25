@@ -55,7 +55,7 @@ bool Texture::loadFromFile( std::string path )
 	texture = newTexture;
 	return texture != NULL;
 }
-#ifdef _SDL_TTF_H
+// #ifdef _SDL_TTF_H
 bool Texture::loadFromRenderedText( std::string textureText, SDL_Color textColor )
 {
 	//Get rid of preexisting texture
@@ -90,7 +90,7 @@ bool Texture::loadFromRenderedText( std::string textureText, SDL_Color textColor
 	//Return success
 	return texture != NULL;
 }
-#endif
+// #endif
 void Texture::free()
 {
 	//Free texture if it exists

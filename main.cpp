@@ -431,6 +431,7 @@ bool menu()
         }
 
     }
+    return false;
 }
 
 bool HandleTextInput(SDL_Event& e, std::string &inputText)

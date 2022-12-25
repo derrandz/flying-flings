@@ -7,7 +7,11 @@ find_package(SDL2_mixer REQUIRED)
 find_package(SDL2_ttf REQUIRED)
 
 include_directories(Flying_FLINGS ${SDL2_INCLUDE_DIRS})
-add_executable(Flying_FLINGS main.cpp)
+file(GLOB Flying_FLINGS_SOURCE
+     "*.h"
+     "*.cpp"
+)
+add_executable(Flying_FLINGS ${Flying_FLINGS_SOURCE})
 target_link_libraries(Flying_FLINGS ${SDL2_LIBRARIES} SDL2_image::SDL2_image SDL2_mixer::SDL2_mixer)
 target_link_libraries(Flying_FLINGS SDL2_ttf::SDL2_ttf)
 
